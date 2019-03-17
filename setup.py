@@ -3,7 +3,7 @@ import setup_translate
 
 pkg = 'Extensions.BlackoutBlind'
 setup (name = 'enigma2-plugin-extensions-blackoutblind',
-       version = '1.3.0',
+       version = '1.3.1',
        description = 'hide white dotted (VBI) lines on top of the screen',
        packages = [pkg],
        package_dir = {pkg: 'plugin'},

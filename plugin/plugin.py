@@ -19,7 +19,7 @@ except:
 SKIN = '<screen position="0,0" size="%d,3" zPosition="1" title="Blind" flags="wfNoBorder">\
 	    <eLabel name="blackbar" position="0,0" size="%d,3" zPosition="2" backgroundColor="#000000" foregroundColor="#000000"/>\
 	</screen>' % ( screenWidth, screenWidth )
-	
+
 class BlindScreen(Screen):
 
     def __init__(self, session):
@@ -31,7 +31,7 @@ class Blind:
     def __init__(self):
         self.dialog = None
         return
-	
+
     def gotSession(self, session):
         self.dialog = session.instantiateDialog(BlindScreen)
         self.showHide()
@@ -88,7 +88,7 @@ class BlindMenu(Screen):
         else:
             pBlind.dialog.hide()
         return
-	
+
 def sessionstart(reason, **kwargs):
     if reason == 0:
         pBlind.gotSession(kwargs['session'])
