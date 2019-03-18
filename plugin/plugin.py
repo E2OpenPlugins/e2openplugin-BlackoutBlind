@@ -1,12 +1,14 @@
 ##
 ## Blackout blind by mrvica, puts a black bar on top of the screen to hide VBI lines, shamelessly stolen from PermanentClock plugin
 ##
+from __init__ import _
 from Components.ActionMap import ActionMap
 from Components.config import config, ConfigInteger, ConfigSubsection, ConfigYesNo
 from Components.MenuList import MenuList
 from enigma import getDesktop
 from Plugins.Plugin import PluginDescriptor
 from Screens.Screen import Screen
+from Components.Sources.StaticText import StaticText
 
 config.plugins.Blind = ConfigSubsection()
 config.plugins.Blind.enabled = ConfigYesNo(default=False)
@@ -54,8 +56,8 @@ pBlind = Blind()
 
 class BlindMenu(Screen):
     if screenWidth >= 1920:
-        skin = '<screen position="center,center" size="630,68" title="Blackout Blind">\
-            <widget name="list" font="Regular;30" itemHeight="36" position="15,15" size="600,36" />\
+        skin = '<screen position="center,center" size="1030,68" title="Blackout Blind">\
+            <widget name="list" font="Regular;30" itemHeight="36" position="15,15" size="1000,36" />\
 	</screen>'
     else:
         skin = '<screen position="center,center" size="420,46" title="Blackout Blind">\
