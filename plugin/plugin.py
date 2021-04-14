@@ -20,7 +20,7 @@ except:
 
 SKIN = '<screen position="0,0" size="%d,3" zPosition="1" title="Blind" flags="wfNoBorder">\
 	    <eLabel name="blackbar" position="0,0" size="%d,3" zPosition="2" backgroundColor="#000000" foregroundColor="#000000"/>\
-	</screen>' % ( screenWidth, screenWidth )
+	</screen>' % (screenWidth, screenWidth)
 
 class BlindScreen(Screen):
 

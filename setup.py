@@ -2,7 +2,7 @@ from distutils.core import setup
 import setup_translate
 
 pkg = 'Extensions.BlackoutBlind'
-setup (name='enigma2-plugin-extensions-blackoutblind',
+setup(name='enigma2-plugin-extensions-blackoutblind',
        version='1.3.1',
        description='hide white dotted (VBI) lines on top of the screen',
        packages=[pkg],
