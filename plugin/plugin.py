@@ -20,13 +20,15 @@ except:
 
 SKIN = '<screen position="0,0" size="%d,3" zPosition="1" title="Blind" flags="wfNoBorder">\
 	    <eLabel name="blackbar" position="0,0" size="%d,3" zPosition="2" backgroundColor="#000000" foregroundColor="#000000"/>\
-	</screen>' % ( screenWidth, screenWidth )
+	</screen>' % (screenWidth, screenWidth)
+
 
 class BlindScreen(Screen):
 
     def __init__(self, session):
         Screen.__init__(self, session)
         self.skin = SKIN
+
 
 class Blind:
 
@@ -52,7 +54,9 @@ class Blind:
         else:
             self.dialog.hide()
 
+
 pBlind = Blind()
+
 
 class BlindMenu(Screen):
     if screenWidth >= 1920:
@@ -91,15 +95,19 @@ class BlindMenu(Screen):
             pBlind.dialog.hide()
         return
 
+
 def sessionstart(reason, **kwargs):
     if reason == 0:
         pBlind.gotSession(kwargs['session'])
 
+
 def startConfig(session, **kwargs):
     session.open(BlindMenu)
 
+
 def main(session, **kwargs):
     session.open(BlindMenu)
+
 
 def Plugins(**kwargs):
     return [PluginDescriptor(where=[PluginDescriptor.WHERE_SESSIONSTART], fnc=sessionstart), PluginDescriptor(name=_('Blackout Blind'), description=_('blacks out two lines on top of the screen'), where=PluginDescriptor.WHERE_PLUGINMENU, icon="plugin.png", fnc=main)]
