@@ -1,7 +1,7 @@
 ##
 ## Blackout blind by mrvica, puts a black bar on top of the screen to hide VBI lines, shamelessly stolen from PermanentClock plugin
 ##
-from __init__ import _
+from .__init__ import _
 from Components.ActionMap import ActionMap
 from Components.config import config, ConfigInteger, ConfigSubsection, ConfigYesNo
 from Components.MenuList import MenuList

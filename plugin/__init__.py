@@ -14,7 +14,7 @@ def localeInit():
 def _(txt):
 	t = gettext.dgettext("BlackoutBlind", txt)
 	if t == txt:
-		print "[BlackoutBlind] fallback to default translation for", txt
+		print("[BlackoutBlind] fallback to default translation for %s" % txt)
 		t = gettext.gettext(txt)
 	return t
 
